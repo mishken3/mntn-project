@@ -1,0 +1,446 @@
+/* basic */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 60px 80px;
+  margin: 0px;
+
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #fff;
+
+  background-image: url('../img/BG.jpg');
+  background-color: #0B1D26;
+  background-repeat: no-repeat;
+  background-size: 100% auto; 
+}
+
+h1, h2 {
+  font-family: 'Chronicle Display';
+  margin: 0px;
+}
+p {
+  margin: 0px;
+}
+
+ul {
+  padding-inline-start: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  width: max-content;
+}
+/* re-use */
+.article__description {
+  position: relative;
+  padding-left: 104px;
+  color: #FBD784;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 6px;
+}
+
+.article__description::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  display: block;
+  
+  content: "";
+  width: 72px;
+  height: 2px;
+
+  background-color: #FBD784;
+}
+
+/* arrow */
+.arrow {
+  width: 16px;
+  height: 24px;
+}
+
+.arrow__scroll {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+/* 
+==================
+HEADER
+==================
+*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 200px;
+}
+
+.header__ul {
+  display: flex;
+  gap: 40px;
+  margin: 0;
+}
+
+.header__account {
+  display: flex;
+  gap: 18px;
+}
+.login__icon {
+  width: 24px;
+  height: 24px;
+  align-self: center;
+}
+
+.logo__svg {
+  width: 108px;
+  height: 24px;
+}
+
+/* 
+==================
+MAIN
+==================
+*/
+main {
+  margin-bottom: 200px;
+}
+
+/* Hiking guide */
+h1 {
+  font-size: 88px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.main__guide__wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 843px;
+}
+
+.main__guide {
+  max-width: 950px;
+}
+
+.arrow--white {
+  fill: #fff;
+}
+
+/* Article */
+article {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px
+}
+
+.article__number {
+  position: relative;
+}
+
+.article__number::before{
+  position: absolute;
+  transform: translateY(20%);
+
+  content: attr(data-number);
+
+  font-weight: 700;
+  font-size: 240px;
+  line-height: 1;
+
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.article__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 140px 114px 140px 150px;
+  max-width: 630px;
+
+  gap: 27px;
+}
+
+.article__img {
+  width: 566px;
+  height: 720px;
+}
+
+.article__header {
+  font-size: 64px;
+}
+
+.article__text {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.article__link {
+  color: #FBD784;
+  font-size: 18px;
+}
+
+.arrow--yellow {
+  fill: #FBD784;
+  transform: rotate(270deg)
+}
+
+article:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+.article__wrapper:nth-child(odd) {
+  margin-right: 0;
+}
+
+article a:hover {
+  color: #fff;
+  transition: all .2s ease;
+}
+
+.article__description::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  display: block;
+  
+  content: "";
+  width: 72px;
+  height: 3px;
+
+  background-color: #FBD784;
+}
+
+/* 
+==================
+FOOTER
+==================
+*/
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__info {
+  max-width: 300px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__svg--footer {
+  height: 38px;
+  margin-bottom: 24px;
+}
+
+.footer__text {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.nav__title {
+  color: #FBD784;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+footer li {
+  margin-bottom: 16px;
+}
+
+.footer__navigation {
+  display: flex;
+  gap: 212px;
+}
+
+.footer__copyright {
+  align-self: flex-end;
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.5); 
+}
+
+a:hover {
+  color: #FBD784;
+  transition: all .2s ease;
+}
+
+/* 
+==================
+MEDIA-QUERIES
+==================
+*/
+
+@media (min-width: 1200px) {
+  #start { /* Для лучшего скролла к элементу*/
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .main__guide__wrapper  {
+    margin-bottom: 380px;
+  }
+  .article__header {
+    font-size: 40px;
+  }
+  .article__wrapper {
+    margin-left: 0px;
+  }
+  footer {
+    justify-content: space-between;
+  }
+  .footer__navigation {
+    gap: 100px;
+  }
+}
+
+@media (max-width: 992px) { 
+  h1 {
+    font-size: 60px;
+  }
+  article {
+    align-items: center;
+    max-height: 950px;
+  }
+  .footer__info {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 40px;
+    background-size: 120% auto;
+    font-size: 14px;
+  }
+  .main__guide__wrapper {
+    margin-bottom: 100px;
+  }
+  #start {
+    padding-top: 0px;
+  }
+  .article__img {
+    width: auto;
+    height: 430px;
+  }
+  .article__wrapper {
+    margin-top: 100px;
+    margin-bottom: 0px;
+  }
+  .article__text {
+    font-size: 14px;
+  }
+  .footer__text {
+    font-size: 14px;
+  }
+  .footer__navigation {
+    gap: 50px;
+  }
+  .nav__title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 415px) {
+  body {
+    padding: 20px 20px;
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 42px;
+  }
+  .header__ul {
+    gap: 10px;
+  }
+  .header__account {
+    gap: 5px;
+  }
+  .logo__svg {
+    width: 60px;
+  }
+  .login__icon {
+    width: 18px;
+    height: 18px;
+  }
+  article {
+    display: block;
+  }
+  article:nth-child(odd) {
+    display: block;
+  }
+  article:last-child {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #FBD784;
+  }
+  .article__header {
+    font-size: 20px;
+  }
+  .article__text {
+    font-size: 12px;
+  }
+  .article__img {
+    height: 400px;
+    display: block;
+    margin: auto;
+  }
+  .article__wrapper {
+    padding-bottom: 20px;
+    margin-top: 50px;
+  }
+  .article__number::before {
+    font-size: 80px;
+    transform: translateY(-35%);
+  }
+  main {
+    margin-bottom: 20px;
+  }
+  .main__guide__wrapper {
+    margin-bottom: 20px;
+  }
+  footer li {
+    margin-bottom: 8px;
+  }
+  .arrow__scroll {
+    display: none;
+  }
+
+}
+
+@media (max-width: 320px) {
+  .article__img {
+    height: 350px;
+  }
+  body {
+    padding: 20px 15px;
+  }
+  .header__ul {
+    gap: 5px;
+  }
+  .nav__title {
+    margin-bottom: 12px;
+  }
+  .footer__info {
+    max-width: 100px;
+  }
+  .footer__navigation {
+    flex-direction: column;
+    gap: 0;
+  }
+}
